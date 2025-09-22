@@ -1,0 +1,230 @@
+{
+  "summary_statistics": {
+    "simulation_duration": 44.95,
+    "average_throughput_dl_mbps": 345.9622110880443,
+    "average_throughput_ul_mbps": 242.17354776163103,
+    "peak_throughput_dl_mbps": 422.742630913438,
+    "peak_throughput_ul_mbps": 295.91984163940657,
+    "average_connection_rate": 1.0,
+    "min_connection_rate": 1.0,
+    "average_resource_utilization": 0.7522222222222222,
+    "peak_resource_utilization": 1.0,
+    "total_measurements": 900,
+    "unique_ues": 12,
+    "unique_gnbs": 3
+  },
+  "ue_statistics": {
+    "0": {
+      "average_throughput_dl_mbps": 368.7916027987067,
+      "average_throughput_ul_mbps": 258.1541219590947,
+      "peak_throughput_dl_mbps": 401.59902970173357,
+      "peak_throughput_ul_mbps": 281.11932079121345,
+      "average_speed": 0.0,
+      "max_speed": 0.0,
+      "total_distance_traveled": 0.0,
+      "handover_count": 173,
+      "average_sinr_db": -6.134934254107137,
+      "average_rsrp_dbm": -49.573477218527664,
+      "connection_time_ratio": 1.0
+    },
+    "1": {
+      "average_throughput_dl_mbps": 360.62379765692975,
+      "average_throughput_ul_mbps": 252.43665835985078,
+      "peak_throughput_dl_mbps": 385.5970304693531,
+      "peak_throughput_ul_mbps": 269.91792132854715,
+      "average_speed": 0.0,
+      "max_speed": 0.0,
+      "total_distance_traveled": 0.0,
+      "handover_count": 198,
+      "average_sinr_db": -8.799222106691674,
+      "average_rsrp_dbm": -50.19224284299983,
+      "connection_time_ratio": 1.0
+    },
+    "2": {
+      "average_throughput_dl_mbps": 346.2045090531595,
+      "average_throughput_ul_mbps": 242.34315633721164,
+      "peak_throughput_dl_mbps": 371.6349064337768,
+      "peak_throughput_ul_mbps": 260.14443450364377,
+      "average_speed": 0.0,
+      "max_speed": 0.0,
+      "total_distance_traveled": 0.0,
+      "handover_count": 198,
+      "average_sinr_db": -12.671277739603942,
+      "average_rsrp_dbm": -52.8863201322383,
+      "connection_time_ratio": 1.0
+    },
+    "3": {
+      "average_throughput_dl_mbps": 349.5108732814264,
+      "average_throughput_ul_mbps": 244.65761129699843,
+      "peak_throughput_dl_mbps": 386.52609761802694,
+      "peak_throughput_ul_mbps": 270.56826833261886,
+      "average_speed": 0.0,
+      "max_speed": 0.0,
+      "total_distance_traveled": 0.0,
+      "handover_count": 214,
+      "average_sinr_db": -7.52727820094836,
+      "average_rsrp_dbm": -49.45004431073656,
+      "connection_time_ratio": 1.0
+    },
+    "4": {
+      "average_throughput_dl_mbps": 318.3405539453565,
+      "average_throughput_ul_mbps": 222.83838776174952,
+      "peak_throughput_dl_mbps": 355.1514922979911,
+      "peak_throughput_ul_mbps": 248.60604460859378,
+      "average_speed": 15.0,
+      "max_speed": 15.0,
+      "total_distance_traveled": 674.25,
+      "handover_count": 217,
+      "average_sinr_db": -17.280636628544556,
+      "average_rsrp_dbm": -53.95214335998736,
+      "connection_time_ratio": 1.0
+    },
+    "5": {
+      "average_throughput_dl_mbps": 374.3206417772402,
+      "average_throughput_ul_mbps": 262.0244492440681,
+      "peak_throughput_dl_mbps": 422.742630913438,
+      "peak_throughput_ul_mbps": 295.91984163940657,
+      "average_speed": 15.0,
+      "max_speed": 15.0,
+      "total_distance_traveled": 674.2499999999955,
+      "handover_count": 141,
+      "average_sinr_db": -2.6211077120774595,
+      "average_rsrp_dbm": -48.1723770793516,
+      "connection_time_ratio": 1.0
+    },
+    "6": {
+      "average_throughput_dl_mbps": 357.3320567584711,
+      "average_throughput_ul_mbps": 250.13243973092975,
+      "peak_throughput_dl_mbps": 399.828208177126,
+      "peak_throughput_ul_mbps": 279.87974572398815,
+      "average_speed": 15.0,
+      "max_speed": 15.0,
+      "total_distance_traveled": 674.2500000000931,
+      "handover_count": 168,
+      "average_sinr_db": -8.464094532915665,
+      "average_rsrp_dbm": -50.39960187851178,
+      "connection_time_ratio": 1.0
+    },
+    "7": {
+      "average_throughput_dl_mbps": 345.1442868466617,
+      "average_throughput_ul_mbps": 241.60100079266314,
+      "peak_throughput_dl_mbps": 399.4344424340943,
+      "peak_throughput_ul_mbps": 279.604109703866,
+      "average_speed": 15.0,
+      "max_speed": 15.0,
+      "total_distance_traveled": 674.2500000000199,
+      "handover_count": 204,
+      "average_sinr_db": -8.627156361531627,
+      "average_rsrp_dbm": -50.489131481894695,
+      "connection_time_ratio": 1.0
+    },
+    "8": {
+      "average_throughput_dl_mbps": 334.7023803583913,
+      "average_throughput_ul_mbps": 234.29166625087387,
+      "peak_throughput_dl_mbps": 371.95259689854043,
+      "peak_throughput_ul_mbps": 260.3668178289783,
+      "average_speed": 4.01904114839917,
+      "max_speed": 7.974159381051416,
+      "total_distance_traveled": 180.85685167796785,
+      "handover_count": 196,
+      "average_sinr_db": -13.288194667226954,
+      "average_rsrp_dbm": -51.90402681438441,
+      "connection_time_ratio": 1.0
+    },
+    "9": {
+      "average_throughput_dl_mbps": 342.7296476188447,
+      "average_throughput_ul_mbps": 239.91075333319122,
+      "peak_throughput_dl_mbps": 393.3614602446769,
+      "peak_throughput_ul_mbps": 275.3530221712738,
+      "average_speed": 3.6726723329794666,
+      "max_speed": 7.9464645495150155,
+      "total_distance_traveled": 165.2702549840766,
+      "handover_count": 220,
+      "average_sinr_db": -6.597843427425119,
+      "average_rsrp_dbm": -49.03459868983163,
+      "connection_time_ratio": 1.0
+    },
+    "10": {
+      "average_throughput_dl_mbps": 313.0879020575044,
+      "average_throughput_ul_mbps": 219.16153144025307,
+      "peak_throughput_dl_mbps": 362.88225000522567,
+      "peak_throughput_ul_mbps": 254.01757500365795,
+      "average_speed": 4.15626025425766,
+      "max_speed": 7.970270580261587,
+      "total_distance_traveled": 186.90890132008363,
+      "handover_count": 210,
+      "average_sinr_db": -16.57769285002786,
+      "average_rsrp_dbm": -54.626741763556396,
+      "connection_time_ratio": 1.0
+    },
+    "11": {
+      "average_throughput_dl_mbps": 340.7582809038402,
+      "average_throughput_ul_mbps": 238.53079663268815,
+      "peak_throughput_dl_mbps": 394.6497125274743,
+      "peak_throughput_ul_mbps": 276.254798769232,
+      "average_speed": 4.070412066856525,
+      "max_speed": 7.922161249724385,
+      "total_distance_traveled": 183.16854300854357,
+      "handover_count": 207,
+      "average_sinr_db": -6.234992810357514,
+      "average_rsrp_dbm": -48.63514304360784,
+      "connection_time_ratio": 1.0
+    }
+  },
+  "gnb_statistics": {
+    "0": {
+      "average_connected_ues": 4.118888888888889,
+      "peak_connected_ues": 9.0,
+      "average_resource_utilization": 0.7731111111111111,
+      "peak_resource_utilization": 1.0,
+      "average_load": 0.041188888888888886,
+      "peak_load": 0.09,
+      "total_handovers_in": 784.0,
+      "total_handovers_out": 0.0,
+      "position": [
+        -800.0,
+        0.0
+      ]
+    },
+    "1": {
+      "average_connected_ues": 3.8566666666666665,
+      "peak_connected_ues": 8.0,
+      "average_resource_utilization": 0.7322222222222222,
+      "peak_resource_utilization": 1.0,
+      "average_load": 0.03856666666666666,
+      "peak_load": 0.08,
+      "total_handovers_in": 768.0,
+      "total_handovers_out": 0.0,
+      "position": [
+        800.0,
+        0.0
+      ]
+    },
+    "2": {
+      "average_connected_ues": 4.024444444444445,
+      "peak_connected_ues": 11.0,
+      "average_resource_utilization": 0.7513333333333334,
+      "peak_resource_utilization": 1.0,
+      "average_load": 0.040244444444444444,
+      "peak_load": 0.11,
+      "total_handovers_in": 794.0,
+      "total_handovers_out": 0.0,
+      "position": [
+        0.0,
+        1200.0
+      ]
+    }
+  },
+  "handover_statistics": {
+    "total_attempts": 2465,
+    "successful_handovers": 2346,
+    "failed_handovers": 116,
+    "ping_pong_handovers": 0,
+    "success_rate": 0.9517241379310345,
+    "failure_rate": 0.047058823529411764,
+    "ping_pong_rate": 0.0,
+    "average_handover_duration": 99.85080988917306,
+    "average_interruption_time": 100.0
+  },
+  "execution_time": 1.375732421875
+}
