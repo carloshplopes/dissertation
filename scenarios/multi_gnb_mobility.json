@@ -1,0 +1,31 @@
+{
+  "simulation": {
+    "simulation_time": 120.0,
+    "random_seed": 123,
+    "log_level": "INFO",
+    "output_directory": "results/multi_gnb_mobility",
+    "enable_plots": true
+  },
+  "network": {
+    "num_gnbs": 3,
+    "coverage_radius": 400.0,
+    "carrier_frequency": 3500000000.0,
+    "bandwidth": 100000000.0
+  },
+  "ue": {
+    "num_ues": 5,
+    "mobility_model": "random_walk",
+    "mobility_speed": 3.0
+  },
+  "traffic": {
+    "traffic_model": "video_streaming",
+    "packet_size": 1500,
+    "packet_interval": 0.033,
+    "qi_value": 2
+  },
+  "handover": {
+    "hysteresis": 2.0,
+    "time_to_trigger": 0.16,
+    "signal_threshold": -110.0
+  }
+}

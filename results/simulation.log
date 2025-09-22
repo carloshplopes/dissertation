@@ -1,0 +1,67 @@
+2025-09-22 14:35:57,980 - __main__ - INFO - Logging initialized at INFO level
+2025-09-22 14:35:57,980 - __main__ - INFO - Starting 5G NR QoS and Mobility Simulation
+2025-09-22 14:35:57,980 - __main__ - INFO - Configuration: 1 gNBs, 1 UEs, 60.0s duration
+2025-09-22 14:35:57,981 - src.core.qos_manager - INFO - QoS Manager initialized
+2025-09-22 14:35:57,981 - src.mobility.mobility_models - INFO - Mobility Manager initialized
+2025-09-22 14:35:57,981 - src.utils.metrics - INFO - Metrics Collector initialized
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Simulation engine initialized with 1 gNBs and 1 UEs
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Starting simulation for 60.0 seconds
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Setting up network topology
+2025-09-22 14:35:57,981 - src.network.gnb - INFO - gNB 0 initialized at (0, 0) with 500.0m coverage
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Created gNB 0 at position (0, 0)
+2025-09-22 14:35:57,981 - src.network.ue - INFO - UE 0 initialized at position [100, 100]
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Created UE 0 at position [100, 100]
+2025-09-22 14:35:57,981 - src.network.gnb - INFO - UE 0 connected to gNB 0
+2025-09-22 14:35:57,981 - src.network.ue - INFO - UE 0 connected to gNB 0 with signal -100.3 dBm
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - UE 0 connected to gNB 0
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Setting up traffic generators
+2025-09-22 14:35:57,981 - src.core.qos_manager - INFO - Created QoS flow 0 with 5QI 2
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Started traffic generation for UE 0 with 5QI 2
+2025-09-22 14:35:57,981 - src.core.simulation_engine - INFO - Setting up mobility models
+2025-09-22 14:35:57,981 - src.mobility.mobility_models - INFO - Added UE 0 with stationary mobility model
+2025-09-22 14:35:57,982 - src.core.simulation_engine - ERROR - Simulation error: <Process(_send_packet_internal) object at 0x7f9e83c59f70> is not a generator.
+2025-09-22 14:35:57,982 - __main__ - ERROR - Simulation failed: <Process(_send_packet_internal) object at 0x7f9e83c59f70> is not a generator.
+Traceback (most recent call last):
+  File "/home/runner/work/dissertation/dissertation/src/core/simulation_engine.py", line 155, in _generate_traffic
+    self.env.process(ue.send_packet(packet))
+  File "/home/runner/.local/lib/python3.12/site-packages/simpy/events.py", line 341, in __init__
+    raise ValueError(f'{generator} is not a generator.')
+ValueError: <Process(_send_packet_internal) object at 0x7f9e83c59f70> is not a generator.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/dissertation/dissertation/run_simulation.py", line 343, in main
+    results = engine.run()
+              ^^^^^^^^^^^^
+  File "/home/runner/work/dissertation/dissertation/src/core/simulation_engine.py", line 248, in run
+    self.env.run(until=self.config.simulation_time)
+  File "/home/runner/.local/lib/python3.12/site-packages/simpy/core.py", line 246, in run
+    self.step()
+  File "/home/runner/.local/lib/python3.12/site-packages/simpy/core.py", line 204, in step
+    raise exc
+ValueError: <Process(_send_packet_internal) object at 0x7f9e83c59f70> is not a generator.
+2025-09-22 14:36:48,904 - __main__ - INFO - Logging initialized at INFO level
+2025-09-22 14:36:48,904 - __main__ - INFO - Starting 5G NR QoS and Mobility Simulation
+2025-09-22 14:36:48,904 - __main__ - INFO - Configuration: 1 gNBs, 1 UEs, 60.0s duration
+2025-09-22 14:36:48,904 - src.core.qos_manager - INFO - QoS Manager initialized
+2025-09-22 14:36:48,904 - src.mobility.mobility_models - INFO - Mobility Manager initialized
+2025-09-22 14:36:48,904 - src.utils.metrics - INFO - Metrics Collector initialized
+2025-09-22 14:36:48,904 - src.core.simulation_engine - INFO - Simulation engine initialized with 1 gNBs and 1 UEs
+2025-09-22 14:36:48,904 - src.core.simulation_engine - INFO - Starting simulation for 60.0 seconds
+2025-09-22 14:36:48,904 - src.core.simulation_engine - INFO - Setting up network topology
+2025-09-22 14:36:48,904 - src.network.gnb - INFO - gNB 0 initialized at (0, 0) with 500.0m coverage
+2025-09-22 14:36:48,905 - src.core.simulation_engine - INFO - Created gNB 0 at position (0, 0)
+2025-09-22 14:36:48,905 - src.network.ue - INFO - UE 0 initialized at position [100, 100]
+2025-09-22 14:36:48,905 - src.core.simulation_engine - INFO - Created UE 0 at position [100, 100]
+2025-09-22 14:36:48,905 - src.network.gnb - INFO - UE 0 connected to gNB 0
+2025-09-22 14:36:48,905 - src.network.ue - INFO - UE 0 connected to gNB 0 with signal -100.3 dBm
+2025-09-22 14:36:48,905 - src.core.simulation_engine - INFO - UE 0 connected to gNB 0
+2025-09-22 14:36:48,905 - src.core.simulation_engine - INFO - Setting up traffic generators
+2025-09-22 14:36:48,905 - src.core.qos_manager - INFO - Created QoS flow 0 with 5QI 2
+2025-09-22 14:36:48,905 - src.core.simulation_engine - INFO - Started traffic generation for UE 0 with 5QI 2
+2025-09-22 14:36:48,905 - src.core.simulation_engine - INFO - Setting up mobility models
+2025-09-22 14:36:48,905 - src.mobility.mobility_models - INFO - Added UE 0 with stationary mobility model
+2025-09-22 14:36:49,163 - src.core.simulation_engine - INFO - Simulation completed
+2025-09-22 14:36:49,164 - src.core.simulation_engine - INFO - Results saved to results/simulation_results.json
+2025-09-22 14:36:49,170 - src.utils.metrics - INFO - Metrics exported to results/

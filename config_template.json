@@ -1,0 +1,71 @@
+{
+  "simulation": {
+    "simulation_time": 100.0,
+    "random_seed": 42,
+    "log_level": "INFO",
+    "output_directory": "results",
+    "enable_plots": true
+  },
+  "network": {
+    "num_gnbs": 3,
+    "coverage_radius": 500.0,
+    "carrier_frequency": 3500000000.0,
+    "bandwidth": 100000000.0,
+    "gnb_positions": [
+      [
+        0,
+        0
+      ],
+      [
+        800,
+        0
+      ],
+      [
+        400,
+        692
+      ]
+    ]
+  },
+  "ue": {
+    "num_ues": 5,
+    "initial_positions": [
+      [
+        100,
+        100
+      ],
+      [
+        200,
+        150
+      ],
+      [
+        300,
+        200
+      ],
+      [
+        600,
+        100
+      ],
+      [
+        500,
+        400
+      ]
+    ],
+    "mobility_model": "random_walk",
+    "mobility_speed": 1.4
+  },
+  "traffic": {
+    "traffic_model": "video_streaming",
+    "packet_size": 1500,
+    "packet_interval": 0.033,
+    "qi_value": 2
+  },
+  "handover": {
+    "hysteresis": 3.0,
+    "time_to_trigger": 0.16,
+    "signal_threshold": -110.0
+  },
+  "channel": {
+    "channel_type": "urban_macro",
+    "temperature": 290.0
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "config": {
+    "simulation_time": 60.0,
+    "random_seed": 42,
+    "log_level": "INFO",
+    "output_directory": "results",
+    "enable_plots": true,
+    "num_gnbs": 1,
+    "coverage_radius": 500.0,
+    "carrier_frequency": 3500000000.0,
+    "bandwidth": 100000000.0,
+    "num_ues": 1,
+    "initial_positions": [
+      [
+        100,
+        100
+      ]
+    ],
+    "mobility_model": "stationary",
+    "mobility_speed": 0.0,
+    "traffic_model": "video_streaming",
+    "packet_size": 1500,
+    "packet_interval": 0.033,
+    "qi_value": 2
+  },
+  "metrics": {
+    "simulation_duration": 59.0,
+    "counters": {
+      "total_packets_sent": 0,
+      "total_packets_delivered": 0,
+      "total_packets_dropped": 0,
+      "total_handovers": 0,
+      "successful_handovers": 0,
+      "failed_handovers": 0
+    },
+    "packet_statistics": {},
+    "throughput_statistics": {
+      "mean_throughput": 0.0,
+      "median_throughput": 0.0,
+      "min_throughput": 0.0,
+      "max_throughput": 0.0,
+      "std_throughput": 0.0,
+      "total_data_volume": 0.0
+    },
+    "handover_statistics": {},
+    "qos_performance": {},
+    "total_packets": 0,
+    "total_throughput_samples": 60,
+    "total_handover_events": 0
+  },
+  "qos_summary": {
+    "total_flows": 1,
+    "gbr_flows": 1,
+    "non_gbr_flows": 0,
+    "delay_critical_flows": 0
+  },
+  "network_summary": {
+    "num_gnbs": 1,
+    "num_ues": 1,
+    "total_handovers": 0
+  }
+}
