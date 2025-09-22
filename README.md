@@ -1,6 +1,6 @@
 # 5G NR QoS and Mobility Simulation Framework
 
-This repository contains the source code for the simulations conducted as part of the Master's Thesis titled: **"[Título da Sua Dissertação aqui]"** at the **[Nome da Sua Universidade aqui]**.
+This repository contains the source code for the simulations conducted as part of the Master's Thesis titled: **"[Evaluation of 5G Networks for Large-Scale Event Transmission]"** at the **[IST - Lisbon University]**.
 
 ## About The Project
 
