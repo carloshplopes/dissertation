@@ -2,26 +2,31 @@
 
 This repository contains the source code for the simulations conducted as part of the Master's Thesis titled: **Evaluation of 5G Networks for Large-Scale Event Transmission** at the **IST - Lisbon University**.
 
+
 ## About The Project
 
-This project provides a simulation framework to evaluate the performance of 5G New Radio (NR) networks under various Quality of Service (QoS) configurations and mobility scenarios. The code was specifically developed to generate the results presented in Chapters [ex: 3, 4, and 5] of the aforementioned dissertation.
+This project provides a simulation framework to evaluate the performance of 5G New Radio (NR) networks under various Quality of Service (QoS) configurations and mobility scenarios. The simulations were implemented using **ns-3**, a discrete-event network simulator for Internet systems.
 
-The primary focus is on the practical implementation and analysis of the 3GPP 5QI (5G QoS Identifier) mechanism for Guaranteed Bit Rate (GBR) services. A key use case explored is high-bitrate uplink video streaming, simulating real-world conditions for media production over 5G.
+The framework leverages the **5G-LENA NR module**, an open-source extension developed by the CTTC, which provides a 3GPP-compliant implementation of the 5G NR protocol stack. This setup was used to generate the results presented in Chapters [ex: 3, 4, and 5] of the dissertation.
+
+The primary focus is on the practical analysis of the 3GPP 5QI (5G QoS Identifier) mechanism for Guaranteed Bit Rate (GBR) services. A key use case explored is high-bitrate uplink video streaming, simulating real-world conditions for media production over 5G.
 
 ### Key Features
 
-* **Configurable 5G NR Scenarios:** Easily define network layouts with single or multiple gNBs (base stations).
-* **5QI QoS Framework:** Implementation of the standardized mapping between 5QI values and QoS characteristics (latency, reliability, priority).
-* **User Mobility:** Models both stationary and mobile User Equipment (UE) to test performance on the move.
-* **Handover Simulation:** Evaluates the impact of handover procedures on service continuity and performance.
+* **Configurable 5G NR Scenarios:** Define network layouts with single or multiple gNBs.
+* **5QI QoS Framework:** Implementation of the standardized mapping between 5QI values and QoS characteristics.
+* **User Mobility:** Models both stationary and mobile User Equipment (UE).
+* **Handover Simulation:** Evaluates the impact of handover procedures on service continuity.
+* **3GPP-Compliant Stack:** Built on the ns-3 5G-LENA module for realistic NR protocol behavior.
 * **Performance Metrics:** Generates key metrics such as throughput, packet delay, and packet error rate.
 
 ### Built With
 
-* [Python 3.x](https://www.python.org/)
+* [ns-3 (Network Simulator 3)](https://www.nsnam.org/)
+* [5G-LENA NR Module (CTTC)](https://5g-lena.cttc.es/)
+* [Python 3.x](https://www.python.org/) (for scripting, data processing, and plotting)
 * [NumPy](https://numpy.org/)
 * [Matplotlib](https://matplotlib.org/)
-* [Nome do Simulador, ex: ns-3, OMNeT++, ou outra biblioteca principal]
 
 ## Getting Started
 
@@ -29,30 +34,41 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-* Python 3.8 or higher
-* pip
+* A working installation of ns-3 (version [ex: ns-3.42]).
+* The 5G-LENA NR module properly integrated with your ns-3 installation.
+* Python 3.8 or higher.
     ```sh
     pip install -r requirements.txt
     ```
 
-### Installation
+### Installation & Usage
 
-1.  Clone the repo
+1.  Clone the repo into your `ns-3/scratch` directory:
     ```sh
-    git clone [https://github.com/](https://github.com/)[your_username]/[your_repository_name].git
+    git clone [https://github.com/](https://github.com/)[your_username]/[your_repository_name].git [your_repository_name]
     ```
-2.  Navigate to the project directory
+2.  Navigate to your ns-3 directory and build the project:
     ```sh
-    cd [your_repository_name]
+    ./ns3 build
     ```
-3.  Install the required packages
+3.  Run a simulation scenario:
     ```sh
-    pip install -r requirements.txt
+    ./ns3 run "scratch/[your_repository_name]/[script_name]"
     ```
+For more details on the available parameters and scenarios, please refer to the documentation within the code or the dissertation text.
 
-## Usage
+## Associated Publication
 
-To run a specific simulation, execute the main script with the desired configuration file. For example:
+For a detailed explanation of the methodology, scenarios, and analysis of the results, please refer to the full dissertation document:
 
-```sh
-python run_simulation.py --config scenarios/appendix_B_scenario.json
+**[Link para a sua dissertação, se disponível publicamente]**
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+## Contact
+
+Carlos Lopes - [carlos.pinho.lopes@tecnico.ulisboa.pt]
+
+Project Link: [https://github.com/carloshplopes/dissertation](https://github.com/carloshplopes/[dissertation)
