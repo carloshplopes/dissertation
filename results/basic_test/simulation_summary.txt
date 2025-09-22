@@ -1,0 +1,29 @@
+5G NR SIMULATION SUMMARY REPORT
+==================================================
+
+SIMULATION CONFIGURATION:
+  Simulation Time: 30.0s
+  Time Step: 0.1s
+  Number of gNBs: 3
+  Number of UEs: 10
+  Frequency: 3500.0 MHz
+  Bandwidth: 100.0 MHz
+
+PERFORMANCE SUMMARY:
+  Average DL Throughput: 3.71 Mbps
+  Average UL Throughput: 2.60 Mbps
+  Peak DL Throughput: 4.43 Mbps
+  Peak UL Throughput: 3.10 Mbps
+  Average Connection Rate: 1.000
+  Average Resource Utilization: 0.007
+
+HANDOVER STATISTICS:
+  Total Attempts: 886
+  Successful: 827
+  Failed: 54
+  Success Rate: 0.933
+  Average Duration: 99.40 ms
+
+EXECUTION INFORMATION:
+  Execution Time: 0.28 seconds
+  Total Measurements: 300

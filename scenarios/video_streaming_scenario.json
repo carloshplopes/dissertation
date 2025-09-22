@@ -1,0 +1,55 @@
+{
+  "simulation": {
+    "simulation_time": 45.0,
+    "time_step": 0.05,
+    "output_file": "results/video_streaming_results.json",
+    "enable_visualization": true
+  },
+  "network": {
+    "num_gnbs": 3,
+    "gnb_positions": [[-800, 0], [800, 0], [0, 1200]],
+    "gnb_tx_power": 46.0,
+    "frequency": 3500.0,
+    "bandwidth": 100.0
+  },
+  "ues": {
+    "num_ues": 12,
+    "mobility_models": ["stationary", "stationary", "stationary", "stationary", "linear", "linear", "linear", "linear", "random_walk", "random_walk", "random_walk", "random_walk"],
+    "mobility_params": [
+      {},
+      {},
+      {},
+      {},
+      {"speed": 15.0, "direction": 0.0},
+      {"speed": 15.0, "direction": 0.785},
+      {"speed": 15.0, "direction": 1.57},
+      {"speed": 15.0, "direction": 2.355},
+      {"max_speed": 8.0, "direction_change_prob": 0.15},
+      {"max_speed": 8.0, "direction_change_prob": 0.15},
+      {"max_speed": 8.0, "direction_change_prob": 0.15},
+      {"max_speed": 8.0, "direction_change_prob": 0.15}
+    ]
+  },
+  "channel": {
+    "propagation_model": "urban_macro",
+    "enable_shadowing": true,
+    "enable_fast_fading": true
+  },
+  "qos": {
+    "default_qci": 75,
+    "qos_flows": [
+      {"ue_id": 0, "qci": 75, "guaranteed_bitrate_ul": 50000, "guaranteed_bitrate_dl": 100000},
+      {"ue_id": 1, "qci": 75, "guaranteed_bitrate_ul": 50000, "guaranteed_bitrate_dl": 100000},
+      {"ue_id": 2, "qci": 75, "guaranteed_bitrate_ul": 50000, "guaranteed_bitrate_dl": 100000},
+      {"ue_id": 3, "qci": 75, "guaranteed_bitrate_ul": 50000, "guaranteed_bitrate_dl": 100000},
+      {"ue_id": 4, "qci": 75, "guaranteed_bitrate_ul": 50000, "guaranteed_bitrate_dl": 100000},
+      {"ue_id": 5, "qci": 75, "guaranteed_bitrate_ul": 50000, "guaranteed_bitrate_dl": 100000},
+      {"ue_id": 6, "qci": 9},
+      {"ue_id": 7, "qci": 9},
+      {"ue_id": 8, "qci": 9},
+      {"ue_id": 9, "qci": 9},
+      {"ue_id": 10, "qci": 9},
+      {"ue_id": 11, "qci": 9}
+    ]
+  }
+}

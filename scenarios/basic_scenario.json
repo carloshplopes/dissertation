@@ -1,0 +1,27 @@
+{
+  "simulation": {
+    "simulation_time": 30.0,
+    "time_step": 0.1,
+    "output_file": "results/basic_scenario_results.json",
+    "enable_visualization": true
+  },
+  "network": {
+    "num_gnbs": 3,
+    "gnb_positions": [[-500, 0], [500, 0], [0, 866]],
+    "gnb_tx_power": 46.0,
+    "frequency": 3500.0,
+    "bandwidth": 100.0
+  },
+  "ues": {
+    "num_ues": 10,
+    "mobility_models": ["stationary", "stationary", "stationary", "stationary", "stationary", "stationary", "stationary", "stationary", "stationary", "stationary"]
+  },
+  "channel": {
+    "propagation_model": "urban_macro",
+    "enable_shadowing": true,
+    "enable_fast_fading": true
+  },
+  "qos": {
+    "default_qci": 9
+  }
+}

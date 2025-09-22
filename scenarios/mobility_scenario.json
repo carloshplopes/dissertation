@@ -1,0 +1,44 @@
+{
+  "simulation": {
+    "simulation_time": 60.0,
+    "time_step": 0.1,
+    "output_file": "results/mobility_scenario_results.json",
+    "enable_visualization": true
+  },
+  "network": {
+    "num_gnbs": 4,
+    "gnb_positions": [[-1000, -1000], [1000, -1000], [-1000, 1000], [1000, 1000]],
+    "gnb_tx_power": 46.0,
+    "frequency": 3500.0,
+    "bandwidth": 100.0
+  },
+  "ues": {
+    "num_ues": 15,
+    "mobility_models": ["random_walk", "random_walk", "random_walk", "random_walk", "random_walk", "random_walk", "random_walk", "random_walk", "linear", "linear", "linear", "linear", "circular", "circular", "circular"],
+    "mobility_params": [
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"max_speed": 5.0, "direction_change_prob": 0.1},
+      {"speed": 10.0, "direction": 0.0},
+      {"speed": 10.0, "direction": 1.57},
+      {"speed": 10.0, "direction": 3.14},
+      {"speed": 10.0, "direction": 4.71},
+      {"radius": 200.0, "angular_speed": 0.05, "center_x": 0, "center_y": 0},
+      {"radius": 200.0, "angular_speed": 0.05, "center_x": 0, "center_y": 0},
+      {"radius": 200.0, "angular_speed": 0.05, "center_x": 0, "center_y": 0}
+    ]
+  },
+  "channel": {
+    "propagation_model": "urban_macro",
+    "enable_shadowing": true,
+    "enable_fast_fading": true
+  },
+  "qos": {
+    "default_qci": 9
+  }
+}
