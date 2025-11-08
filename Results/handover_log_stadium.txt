@@ -1,0 +1,4 @@
+[6.500000s] HANDOVER: Referee_0 gNB_0 -> gNB_1 (RSRP: -49.1 dBm) (Dist: 83.4 m) [Total_HOs: 1]
+[6.700000s] HANDOVER: Referee_2 gNB_3 -> gNB_4 (RSRP: -49.1 dBm) (Dist: 83.4 m) [Total_HOs: 2]
+[12.600000s] HANDOVER: Referee_1 gNB_2 -> gNB_3 (RSRP: -49.0 dBm) (Dist: 82.6 m) [Total_HOs: 3]
+[12.800000s] HANDOVER: Referee_3 gNB_5 -> gNB_0 (RSRP: -49.0 dBm) (Dist: 82.6 m) [Total_HOs: 4]

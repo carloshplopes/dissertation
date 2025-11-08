@@ -5,10 +5,10 @@
 <node id="3" sysId="0" locX="-120" locY="1.469576159e-14" />
 <node id="4" sysId="0" locX="-60" locY="-103.9230485" />
 <node id="5" sysId="0" locX="60" locY="-103.9230485" />
-<node id="6" sysId="0" locX="65" locY="0" />
-<node id="7" sysId="0" locX="3.980102097e-15" locY="65" />
-<node id="8" sysId="0" locX="-65" locY="7.960204194e-15" />
-<node id="9" sysId="0" locX="-1.194030629e-14" locY="-65" />
+<node id="6" sysId="0" locX="55" locY="0" />
+<node id="7" sysId="0" locX="3.367778698e-15" locY="55" />
+<node id="8" sysId="0" locX="-55" locY="6.735557395e-15" />
+<node id="9" sysId="0" locX="-1.010333609e-14" locY="-55" />
 <node id="10" sysId="0" locX="40" locY="60" />
 <node id="11" sysId="0" locX="60" locY="60" />
 <node id="12" sysId="0" locX="-30" locY="60" />
