@@ -62,7 +62,7 @@ struct SimulationStats {
 // ========== STADIUM PARAMETERS ==========
 const double CATWALK_RADIUS = 120.0;   // Radius of catwalk where gNBs are located
 const double CATWALK_HEIGHT = 25.0;    // Height of gNBs on catwalk  
-const double CAMPO_RADIUS = 60.0;      // Radius of field where referees move
+const double CAMPO_RADIUS = 65.0;      // Radius of field where referees move
 const double ARBITRO_HEIGHT = 1.7;     // Height of referees
 const double ARBITRO_SPEED = 5.0;      // Speed of referees (m/s) - at 15s of simulation the referees will be able to move 75 meters
 
