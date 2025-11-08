@@ -5,9 +5,9 @@ This repository contains the source code for the simulations conducted as part o
 
 ## About The Project
 
-This project provides a simulation framework to evaluate the performance of 5G New Radio (NR) networks under various Quality of Service (QoS) configurations and mobility scenarios. The simulations were implemented using **ns-3**, a discrete-event network simulator for Internet systems.
+This project provides a simulation framework to evaluate the performance of 5G New Radio (NR) networks under various Quality of Service (QoS) configurations and mobility scenarios. The simulations were implemented using **ns-3**, a discrete-event network simulator.
 
-The framework leverages the **5G-LENA NR module**, an open-source extension developed by the CTTC, which provides a 3GPP-compliant implementation of the 5G NR protocol stack. This setup was used to generate the results presented in Chapters [ex: 3, 4, and 5] of the dissertation.
+The framework leverages the **5G-LENA NR module**, an open-source extension developed by the CTTC, which provides a 3GPP-compliant implementation of the 5G NR protocol stack. This setup was used to generate the results presented in Chapter 5 of the dissertation.
 
 The primary focus is on the practical analysis of the 3GPP 5QI (5G QoS Identifier) mechanism for Guaranteed Bit Rate (GBR) services. A key use case explored is high-bitrate uplink video streaming, simulating real-world conditions for media production over 5G.
 
@@ -24,9 +24,7 @@ The primary focus is on the practical analysis of the 3GPP 5QI (5G QoS Identifie
 
 * [ns-3 (Network Simulator 3)](https://www.nsnam.org/)
 * [5G-LENA NR Module (CTTC)](https://5g-lena.cttc.es/)
-* [Python 3.x](https://www.python.org/) (for scripting, data processing, and plotting)
-* [NumPy](https://numpy.org/)
-* [Matplotlib](https://matplotlib.org/)
+
 
 ## Getting Started
 
@@ -36,10 +34,7 @@ To get a local copy up and running, follow these simple steps.
 
 * A working installation of ns-3 (version [ex: ns-3.42]).
 * The 5G-LENA NR module properly integrated with your ns-3 installation.
-* Python 3.8 or higher.
-    ```sh
-    pip install -r requirements.txt
-    ```
+
 
 ### Installation & Usage
 
@@ -61,7 +56,7 @@ For more details on the available parameters and scenarios, please refer to the 
 
 For a detailed explanation of the methodology, scenarios, and analysis of the results, please refer to the full dissertation document:
 
-**[Link para a sua dissertação, se disponível publicamente]**
+**[Dissertation](https://fenix.tecnico.ulisboa.pt/cursos/merc/dissertacao/1128253548924068)**
 
 ## License
 
