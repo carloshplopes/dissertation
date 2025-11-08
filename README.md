@@ -1,6 +1,6 @@
 # 5G NR QoS and Mobility Simulation Framework
 
-This repository contains the source code for the simulations conducted as part of the Master's Thesis titled: **Large-Scale Live Event Using 5g Networks** at the **IST - Lisbon University**.
+This repository contains the source code for the simulations conducted as part of the Master's Thesis titled: **Large-Scale Live Event Using 5G Networks** at the **IST - Lisbon University**.
 
 
 ## About The Project
@@ -51,4 +51,4 @@ For a detailed explanation of the methodology, scenarios, and analysis of the re
 
 Carlos Lopes - [carlos.pinho.lopes@tecnico.ulisboa.pt]
 
-Project Link: **[Large-Scale Live Event Using 5g Networks](https://fenix.tecnico.ulisboa.pt/cursos/merc/dissertacao/1128253548924068)**
+Project Link: **[Large-Scale Live Event Using 5G Networks](https://fenix.tecnico.ulisboa.pt/cursos/merc/dissertacao/1128253548924068)**
