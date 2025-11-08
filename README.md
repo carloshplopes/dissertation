@@ -30,26 +30,14 @@ The primary focus is on the practical analysis of the 3GPP 5QI (5G QoS Identifie
 
 To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
+### Prerequisites and Intalation
 
 * A working installation of ns-3 (version [ex: ns-3.42]).
 * The 5G-LENA NR module properly integrated with your ns-3 installation.
 
 
-### Installation & Usage
+### Usage
 
-1.  Clone the repo into your `ns-3/scratch` directory:
-    ```sh
-    git clone [https://github.com/](https://github.com/)[your_username]/[your_repository_name].git [your_repository_name]
-    ```
-2.  Navigate to your ns-3 directory and build the project:
-    ```sh
-    ./ns3 build
-    ```
-3.  Run a simulation scenario:
-    ```sh
-    ./ns3 run "scratch/[your_repository_name]/[script_name]"
-    ```
 For more details on the available parameters and scenarios, please refer to the documentation within the code or the dissertation text.
 
 ## Associated Publication
