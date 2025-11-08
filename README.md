@@ -45,11 +45,10 @@ For more details on the available parameters and scenarios, please refer to the 
 For a detailed explanation of the methodology, scenarios, and analysis of the results, please refer to the full dissertation document:
 
 **[Dissertation](https://fenix.tecnico.ulisboa.pt/cursos/merc/dissertacao/1128253548924068)**
-**[Script](https://drive.google.com/drive/folders/15UFnz0f0r6IQ2FeTMDRh_MAbJYL0hFk_?usp=drive_link)**
 
 
 ## Contact
 
 Carlos Lopes - [carlos.pinho.lopes@tecnico.ulisboa.pt]
 
-Project Link: [https://github.com/carloshplopes/dissertation](https://github.com/carloshplopes/[dissertation)
+Project Link: **[Script](https://drive.google.com/drive/folders/15UFnz0f0r6IQ2FeTMDRh_MAbJYL0hFk_?usp=drive_link)**
