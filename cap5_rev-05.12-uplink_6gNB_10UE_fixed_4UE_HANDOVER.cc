@@ -61,8 +61,8 @@ struct SimulationStats {
 
 // ========== STADIUM PARAMETERS ==========
 const double CATWALK_RADIUS = 120.0;   // Radius of catwalk where gNBs are located
-const double CATWALK_HEIGHT = 25.0;    // Height of gNBs on catwalk  
-const double CAMPO_RADIUS = 65.0;      // Radius of field where referees move
+const double CATWALK_HEIGHT = 35.0;    // Height of gNBs on catwalk  
+const double CAMPO_RADIUS = 55.0;      // Radius of field where referees move
 const double ARBITRO_HEIGHT = 1.7;     // Height of referees
 const double ARBITRO_SPEED = 5.0;      // Speed of referees (m/s) - at 15s of simulation the referees will be able to move 75 meters
 
@@ -91,10 +91,9 @@ void MoveArbitroCircular(Ptr<Node> ue, uint32_t ueId)
     mobility->SetPosition(Vector(newX, newY, ARBITRO_HEIGHT));
     
     // Schedule next movement if simulation is still running
-    // Correção: Escalonar atualizações para evitar sobrecarga simultânea do scheduler
     if (Simulator::Now().GetSeconds() < 14.5)
     {
-        // Cada árbitro atualiza em momentos diferentes (offset de 125ms entre eles)
+        // offset 500ms
         Simulator::Schedule(MilliSeconds(500), &MoveArbitroCircular, ue, ueId);
     }
 }
@@ -483,7 +482,7 @@ void PrintFinalStats()
      uint32_t cameraBitRate = 35000000;   // 35 Mbps as per user requirements
      bool doubleOperationalBand = false;
      bool traces = false;
-     bool anim = false;
+     bool anim = true;
  
      // Traffic parameters for different profiles
      // Profile 1: Mobile referees (4 UEs) - 35 Mbps configured for guaranteed 5+ Mbps effective
@@ -1079,21 +1078,21 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
  
 
 
-/*
+
  
      // --- START OF DYNAMIC GNB CONFIGURATION BLOCK ---
 
-    std::cout << "\n--- Configurando Padrão TDD para todas as gNBs ---" << std::endl;
-    // BWP0, the TDD one - Aplicado a TODAS as gNBs
+    std::cout << "\n--- TDD Pattern for all gNBs ---" << std::endl;
+    // BWP0, the TDD one - Apply for all gNBs
     for (uint32_t i = 0; i < gnbNetDev.GetN(); ++i)
     {
-        nrHelper->GetGnbPhy(gnbNetDev.Get(i), 0)
-            ->SetAttribute("Pattern", StringValue("DL|DL|UL|S|UL|UL|UL|UL|S|UL"));
+        nrHelper->GetGnbPhy(gnbNetDev.Get(0), 0)
+            ->SetAttribute("Pattern", StringValue("DL|S|UL|UL|UL|UL|UL|UL|S|UL"));
     }
-    std::cout << "Padrão TDD 'DL|DL|UL|S|UL|UL|UL|UL|S|UL' aplicado a " << gnbNetDev.GetN() << " gNBs." << std::endl;
+    std::cout << "TDD Pattern 'DL|S|UL|UL|UL|UL|UL|UL|S|UL'  " << gnbNetDev.GetN() << " gNBs." << std::endl;
     std::cout << "-------------------------------------------------" << std::endl;
 
-*/
+
 
 
     // --- END OF DYNAMIC GNB CONFIGURATION BLOCK ---
@@ -1182,7 +1181,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
                     |
                     | (Logical Connection)
                     |
-                  gNB1 
+                  gNB x N 
                     |         
                    UE1 - CONV VOICE - 5QI = 1
                    UE2 - CONV VIDEO - 5QI = 2
@@ -1232,7 +1231,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
       |                            |  \       /
       |                Histerese ->{   \     /
       |                            |    \   /
-      |                            |     \ / <--- Ponto onde os sinais se cruzam
+      |                            |     \ / <--- point
       |                            |      X
       |                           /      / \
       |                          /      /   \
@@ -1569,12 +1568,12 @@ if (anim)
      std::cout << "Tracking system activated for " << ueNodes.GetN() << " cameras" << std::endl;
      
      // ========== CONNECT HANDOVER CALLBACKS ==========
-     std::cout << "\n--- Conectando Callbacks de Handover ---" << std::endl;
+     std::cout << "\n--- Connecting Handover Callbacks ---" << std::endl;
      Config::Connect("/NodeList/*/DeviceList/*/NrUeRrc/HandoverStart",
                      MakeCallback(&NotifyHandoverStartUe));
      Config::Connect("/NodeList/*/DeviceList/*/NrUeRrc/HandoverEndOk",
                      MakeCallback(&NotifyHandoverEndOkUe));
-     std::cout << "Callbacks de handover conectados para monitoramento de continuidade" << std::endl;
+     std::cout << "Handover Callbacks connected to monitoring" << std::endl;
      std::cout << "=========================================================" << std::endl;
  
      Simulator::Stop(simTime);
