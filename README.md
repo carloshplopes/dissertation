@@ -51,4 +51,4 @@ For a detailed explanation of the methodology, scenarios, and analysis of the re
 
 Carlos Lopes - [carlos.pinho.lopes@tecnico.ulisboa.pt]
 
-Project Link: **[Script](https://drive.google.com/drive/folders/15UFnz0f0r6IQ2FeTMDRh_MAbJYL0hFk_?usp=drive_link)**
+Project Link: **[Large-Scale Live Event Using 5g Networks](https://drive.google.com/drive/folders/15UFnz0f0r6IQ2FeTMDRh_MAbJYL0hFk_?usp=drive_link)**
