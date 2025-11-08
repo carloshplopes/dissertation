@@ -58,9 +58,7 @@ For a detailed explanation of the methodology, scenarios, and analysis of the re
 
 **[Dissertation](https://fenix.tecnico.ulisboa.pt/cursos/merc/dissertacao/1128253548924068)**
 
-## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
