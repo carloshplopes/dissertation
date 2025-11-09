@@ -2,8 +2,7 @@
 rm -rf cmake-cache build              
 (base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % rm -rf cmake-c
 ache build
-(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % ./ns3 config
-ure --enable-examples --enable-tests
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % ./ns3 configure --enable-examples --enable-tests
 Warn about uninitialized values.
 -- The CXX compiler identification is AppleClang 17.0.0.17000319
 -- The C compiler identification is AppleClang 17.0.0.17000319
