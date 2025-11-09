@@ -120,10 +120,10 @@ void TrackUePosition(Ptr<Node> ue, uint32_t ueId)
                 << pos.z << ","
                 << speed << std::endl;
     
-    // Correção: Reschedule com offset específico para cada UE para evitar sobrecarga
+    
     if (Simulator::Now().GetSeconds() < 14.5)
     {
-        double offset = (ueId % 5) * 0.1;  // Offset de 0-0.4s baseado no ID do UE
+        double offset = (ueId % 5) * 0.1;  
         Simulator::Schedule(Seconds(0.5 + offset), &TrackUePosition, ue, ueId);
     }
 }
@@ -252,7 +252,7 @@ void LogPowerAndHandover(Ptr<Node> ue, uint32_t ueId, NodeContainer gnbNodes)
     }
 }
 
-// ========== CALLBACK DE HANDOVER PARA GARANTIR CONECTIVIDADE ==========
+// ========== CALLBACK FOR WARANTY-RELATED HANDOVER CONNECTIVITY ==========
 void NotifyHandoverEndOkUe(std::string context, uint64_t imsi, uint16_t cellId, uint16_t rnti)
 {
     double now = Simulator::Now().GetSeconds();
@@ -269,26 +269,26 @@ void NotifyHandoverStartUe(std::string context, uint64_t imsi, uint16_t cellId, 
               << " para CellId=" << targetCellId << std::endl;
 }
 
-// ========== MECANISMO DE RECONEXÃO AUTOMÁTICA ==========
+// ========== MECANISM OF AUTOMATIC RECONECTION ==========
 void CheckAndReconnectUes(Ptr<NrHelper> nrHelper,
                           NetDeviceContainer ueNetDevs,
                           NetDeviceContainer gnbNetDevs,
                           Ptr<FlowMonitor> monitor,
                           Ptr<Ipv4FlowClassifier> classifier)
 {
-    // Parâmetros não utilizados diretamente nesta versão de verificação
+    // Direct parameters
     (void)monitor;
     (void)classifier;
 
     const double now = Simulator::Now().GetSeconds();
-    const double inactivityThreshold = 1.5; // segundos sem tráfego recebido
+    const double inactivityThreshold = 1.5; // seconds without traffic
 
     for (uint32_t i = 0; i < ueNetDevs.GetN(); ++i)
     {
         Ptr<Node> ueNode = ueNetDevs.Get(i)->GetNode();
         uint32_t nodeId = ueNode->GetId();
 
-        // Somente os UEs móveis (árbitros) são monitorados
+        // Monitor Only for UEs with mobility (referees)
         if (refereeNodeIds.find(nodeId) == refereeNodeIds.end())
         {
             continue;
@@ -603,14 +603,11 @@ void PrintFinalStats()
      Config::SetDefault("ns3::NrEpsBearer::Release", UintegerValue(15)); // release 15
      Config::SetDefault("ns3::NrGnbMac::NumberOfRaPreambles", UintegerValue(64));  // Number of preambles available for RACH process
      
-     // Correção: Configurações inválidas removidas - atributos não existem nesta versão do NR
-     // Usando apenas configurações válidas e testadas
+
      
      // Enhanced scheduler configurations to handle high UE loads
-
-     // Correção: Handover mais conservador para evitar falhas durante movimento
-     Config::SetDefault("ns3::NrA3RsrpHandoverAlgorithm::Hysteresis", DoubleValue(3.0));  // Aumentado para 3.0 dB
-     Config::SetDefault("ns3::NrA3RsrpHandoverAlgorithm::TimeToTrigger", TimeValue(MilliSeconds(256))); // Aumentado para 256ms
+     Config::SetDefault("ns3::NrA3RsrpHandoverAlgorithm::Hysteresis", DoubleValue(3.0));  //  3.0 dB
+     Config::SetDefault("ns3::NrA3RsrpHandoverAlgorithm::TimeToTrigger", TimeValue(MilliSeconds(256))); //  256ms
      
      // Enhanced RRC configurations for mobile UEs
      // Config::SetDefault("ns3::NrRrcProtocolReal::RrcConfigurationDelay", TimeValue(MilliSeconds(3))); // Commented out - not supported in this NS-3 version
@@ -694,8 +691,7 @@ void PrintFinalStats()
         
         std::cout << "Referee " << i << ": (" << x << ", " << y << ", " << ARBITRO_HEIGHT << ") - Mobile" << std::endl;
         
-        // Correção: Escalonar o início do movimento de cada árbitro (offset de 125ms)
-        // Isso evita que todos os árbitros atualizem posição simultaneamente
+        // offset  125ms
         double startTime = 0.8 + (i * 0.125);  // 0.8s, 0.925s, 1.05s, 1.175s
         Simulator::Schedule(Seconds(startTime), &MoveArbitroCircular, refereeNodes.Get(i), i);
         std::cout << "  -> Movimento iniciará em t=" << startTime << "s" << std::endl;
@@ -1263,7 +1259,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
  
 
     // ========== VALIDATION CELL ==========
-    std::cout << "\n--- Verificando a Célula (gNB) de Anexação Inicial dos UEs ---" << std::endl;
+    std::cout << "\n--- Verify cell (gNB) to attach Inicial UEs ---" << std::endl;
     for (uint32_t i = 0; i < ueVideoNetDev.GetN(); ++i)
     {
         Ptr<NetDevice> ueDev = ueVideoNetDev.Get(i);
@@ -1300,7 +1296,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
             }
             else
             {
-                std::cout << "UE " << ueDev->GetNode()->GetId() << " não conseguiu se anexar a nenhuma gNB." << std::endl;
+                std::cout << "UE " << ueDev->GetNode()->GetId() << " not attached in any gNB." << std::endl;
             }
         }
     }
@@ -1442,10 +1438,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
     allUeNetDevs.Add(ueVoiceNetDev);
     allUeNetDevs.Add(ueLowLatNetDev); 
     allUeNetDevs.Add(ueBestEffNetDev);
-
-    // DISABLED: Schedule reconnection monitoring system (causing issues)
-    // Simulator::Schedule(Seconds(2.0), &CheckAndReconnectUes, nrHelper, allUeNetDevs, gnbNetDev, monitor, classifier);
-
+  
     // Enable basic tracing for analysis
     if (traces)
     {
@@ -1463,8 +1456,6 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
     std::cout << "Callbacks de handover já conectados anteriormente" << std::endl;
     std::cout << "--------------------------------------------------------" << std::endl;
 
-    // DISABLED: Schedule final statistics collection (causing compilation issues)
-    // Simulator::Schedule(simTime - MilliSeconds(100), &PrintFinalStats);
 
 
      serverApps.Stop(simTime);
@@ -1493,7 +1484,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
     // ========== CRITICAL FIX: ENABLE BEARER CONTINUITY DURING HANDOVER ==========
     // This ensures that data bearers are maintained when UEs handover between gNBs
     // Without this, UEs lose their data connection after handover
-    std::cout << "\n--- Habilitando Continuidade de Bearers Durante Handover ---" << std::endl;
+    std::cout << "\n--- Performing Bearers into Handover ---" << std::endl;
     for (uint32_t i = 0; i < gnbNetDev.GetN(); ++i)
     {
         Ptr<NrGnbNetDevice> gnbDev = DynamicCast<NrGnbNetDevice>(gnbNetDev.Get(i));
@@ -1505,7 +1496,7 @@ std::cout << "- 4K Cameras: " << camera4kNodes.GetN() << " UEs @ " << targetRate
             rrc->SetAttribute("AdmitRrcConnectionRequest", BooleanValue(true));
         }
     }
-    std::cout << "Continuidade de bearers habilitada em todas as " << gnbNetDev.GetN() << " gNBs" << std::endl;
+    std::cout << "Performing Bearers into Handover enable in all " << gnbNetDev.GetN() << " gNBs" << std::endl;
     std::cout << "---------------------------------------------------------------" << std::endl;
 
 
@@ -1553,7 +1544,7 @@ if (anim)
      // Initialize tracking system for stadium handover
      std::cout << "\n--- Initializing handover tracking system ---" << std::endl;
      
-     // Correção: Escalonar tracking para evitar medições simultâneas
+     // Escalonar tracking para evitar medições simultâneas
      for (uint32_t i = 0; i < ueNodes.GetN(); ++i)
      {
          // Cada UE tem seu tracking em momentos diferentes (offset de 100ms)
@@ -1600,7 +1591,7 @@ if (anim)
      i != stats.end();
      ++i)
      {
-        double dataRate = 76e6; // Channel transmission rate (in bps, adjust as needed) 76 Mb/s
+        double dataRate = 100e6; // Channel transmission rate (in bps, adjust as needed) 100 Mb/s
         // double dataRate = (gNbNum * ueNumPergNb * targetRateMbpsVideo * 1e6) + (gNbNum * ueNumPergNb * targetRateMbpsBe * 1e6) + (gNbNum * ueNumPergNb * targetRateMbpsULL * 1e6); // Channel transmission rate (in bps, adjust as needed)
 
 
@@ -1681,14 +1672,14 @@ if (anim)
      outFile << "  Mean flow delay: " << meanFlowDelay << " ms\n";
      outFile << "  Mean flow jitter: " << meanFlowJitter << " ms\n\n";
 
-     outFile << "  Taxa de Ocupação de Dados: " << channelUtilization << " % \n\n";
+     outFile << "  Occupation time in 100 Mbps: " << channelUtilization << " % \n\n";
  
 
      std::cout << "===== Estatísticas de PRBs =====" << std::endl;
      std::cout << "Tempo total do canal ocupado: " << channelBusyTime << " segundos" << std::endl;
      std::cout << "Total simulation time: " << totalChannelTime << " seconds\n\n" << std::endl;
  
-     std::cout << "Scheduler configurado: NrMacSchedulerOfdmaQos \n\n\n" << std::endl;
+     std::cout << "Scheduler: NrMacSchedulerOfdmaQos \n\n\n" << std::endl;
 
 
      outFile.close();
@@ -1722,7 +1713,7 @@ if (anim)
              return EXIT_FAILURE;
          }
      }
-     else if (argc == 1 and ueNumPergNb == 9) // called from examples-to-run.py with these parameters
+     else if (argc == 1 and ueNumPergNb == 9)
      {
          double toleranceMeanFlowThroughput = 0.0001 * 47.858536;
          double toleranceMeanFlowDelay = 0.0001 * 10.504189;
@@ -1741,6 +1732,6 @@ if (anim)
      }
      else
      {
-         return EXIT_SUCCESS; // we dont check other parameters configurations at the moment
+         return EXIT_SUCCESS;
      }
  }
