@@ -1,0 +1,170 @@
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % 
+rm -rf cmake-cache build              
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % rm -rf cmake-c
+ache build
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % ./ns3 config
+ure --enable-examples --enable-tests
+Warn about uninitialized values.
+-- The CXX compiler identification is AppleClang 17.0.0.17000319
+-- The C compiler identification is AppleClang 17.0.0.17000319
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Using default output directory /Users/carloshenriquelopes/ns-3-dev/build
+-- CCache is enabled.
+-- Proceeding without cmake-format
+-- Found Git: /usr/bin/git (found version "2.50.1 (Apple Git-155)")
+-- find_external_library: SQLite3 was found.
+-- Found GTK3_GTK: /usr/local/lib/libgtk-3.0.dylib
+-- Found Boost: /usr/local/lib/cmake/Boost-1.88.0/BoostConfig.cmake (found version "1.88.0")
+-- GSL was found.
+-- docs: doxygen documentation not enabled due to missing dependencies: dia
+-- Found Sphinx: /usr/local/bin/sphinx-build
+-- docs: sphinx documentation not enabled due to missing dependencies: dia
+-- Performing Test HAVE_UINT128_T
+-- Performing Test HAVE_UINT128_T - Failed
+-- Performing Test HAVE___UINT128_T
+-- Performing Test HAVE___UINT128_T - Success
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for dirent.h
+-- Looking for dirent.h - found
+-- Looking for stdlib.h
+-- Looking for stdlib.h - found
+-- Looking for signal.h
+-- Looking for signal.h - found
+-- Looking for netpacket/packet.h
+-- Looking for netpacket/packet.h - not found
+-- Looking for getenv
+-- Looking for getenv - found
+-- Platform doesn't support TAP and EMU features. Continuing without them.
+-- Precompiled headers were enabled.
+-- Processing contrib/nr
+-- Processing src/antenna
+-- Performing Test HAVE_STD_BESSEL_FUNC
+-- Performing Test HAVE_STD_BESSEL_FUNC - Failed
+-- Looking for include file boost/math/special_functions/bessel.hpp
+-- Looking for include file boost/math/special_functions/bessel.hpp - found
+-- Boost Bessel function has been found.
+-- Processing src/aodv
+-- Processing src/applications
+-- Processing src/bridge
+-- Processing src/brite
+-- Skipping src/brite
+-- Processing src/buildings
+-- Processing src/click
+-- Skipping src/click
+-- Processing src/config-store
+-- Processing src/core
+-- Looking for include files boost/units/quantity.hpp, boost/units/systems/si.hpp
+-- Looking for include files boost/units/quantity.hpp, boost/units/systems/si.hpp - found
+-- Boost Units have been found.
+-- Processing src/csma
+-- Processing src/csma-layout
+-- Processing src/dsdv
+-- Processing src/dsr
+-- Processing src/energy
+-- Processing src/flow-monitor
+-- Processing src/internet
+-- Processing src/internet-apps
+-- Processing src/lr-wpan
+-- Processing src/lte
+-- Processing src/mesh
+-- Processing src/mobility
+-- Processing src/netanim
+-- Processing src/network
+-- Processing src/nix-vector-routing
+-- Processing src/olsr
+-- Processing src/openflow
+-- Skipping src/openflow
+-- Processing src/point-to-point
+-- Processing src/point-to-point-layout
+-- Processing src/propagation
+-- Processing src/sixlowpan
+-- Processing src/spectrum
+-- Processing src/stats
+-- Processing src/test
+-- Processing src/topology-read
+-- Processing src/traffic-control
+-- Processing src/uan
+-- Processing src/virtual-net-device
+-- Processing src/wifi
+-- Processing src/wimax
+-- ---- Summary of ns-3 settings:
+Build profile                 : default
+Build directory               : /Users/carloshenriquelopes/ns-3-dev/build
+Build with runtime asserts    : ON
+Build with runtime logging    : ON
+Build version embedding       : OFF (not requested)
+BRITE Integration             : OFF (Missing headers: "Brite.h" and missing libraries: "brite")
+DES Metrics event collection  : OFF (not requested)
+DPDK NetDevice                : OFF (not requested)
+Emulation FdNetDevice         : OFF (not requested)
+Examples                      : ON
+File descriptor NetDevice     : OFF (missing dependency)
+GNU Scientific Library (GSL)  : ON
+GtkConfigStore                : ON
+LibXml2 support               : ON
+MPI Support                   : OFF (not requested)
+ns-3 Click Integration        : OFF (Missing headers: "simclick.h" and missing libraries: "nsclick click")
+ns-3 OpenFlow Integration     : OFF (Missing headers: "openflow.h" and missing libraries: "openflow")
+Netmap emulation FdNetDevice  : OFF (not requested)
+PyViz visualizer              : OFF (Python Bindings are disabled)
+Python Bindings               : OFF (not requested)
+SQLite support                : ON
+Eigen3 support                : ON
+Tap Bridge                    : OFF (not requested)
+Tap FdNetDevice               : OFF (not requested)
+Tests                         : ON
+
+
+Modules configured to be built:
+antenna                   aodv                      applications              
+bridge                    buildings                 config-store              
+core                      csma                      csma-layout               
+dsdv                      dsr                       energy                    
+flow-monitor              internet                  internet-apps             
+lr-wpan                   lte                       mesh                      
+mobility                  netanim                   network                   
+nix-vector-routing        nr                        olsr                      
+point-to-point            point-to-point-layout     propagation               
+sixlowpan                 spectrum                  stats                     
+test                      topology-read             traffic-control           
+uan                       virtual-net-device        wifi                      
+wimax                     
+
+Modules that cannot be built:
+brite                     click                     fd-net-device             
+mpi                       openflow                  tap-bridge                
+visualizer                
+
+
+-- Configuring done (53.2s)
+-- Generating done (20.1s)
+-- Build files have been written to: /Users/carloshenriquelopes/ns-3-dev/cmake-cache
+Finished executing the following commands:
+mkdir cmake-cache
+/opt/local/bin/cmake -S /Users/carloshenriquelopes/ns-3-dev -B /Users/carloshenriquelopes/ns-3-dev/cmake-cache -DCMAKE_BUILD_TYPE=default -DNS3_ASSERT=ON -DNS3_LOG=ON -DNS3_WARNINGS_AS_ERRORS=OFF -DNS3_NATIVE_OPTIMIZATIONS=OFF -DNS3_EXAMPLES=ON -DNS3_TESTS=ON -G Ninja --warn-uninitialized
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % ./ns3 build 
+cap5_rev-05.12-uplink_6gNB_10UE_fixed_4UE_HANDOVER
+[0/2] Re-checking globbed directories...
+[1142/1143] Linking CXX executable ...gNB_10UE_fixed_4UE_HANDOVER-default
+Finished executing the following commands:
+/opt/local/bin/cmake --build /Users/carloshenriquelopes/ns-3-dev/cmake-cache -j 7 --target scratch_cap5_rev-05.12-uplink_6gNB_10UE_fixed_4UE_HANDOVER
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % 
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % ./ns3 run scratch/cap5_rev-05.12-uplink_6gNB_10UE_fixed_4UE_HANDOVER.cc > cap5-05.12-uplink_6gNB_10UE_fixed_4UE_HANDOVER_final_rev.txt 2>&1
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % 
+(base) carloshenriquelopes@MacBook-Air-de-Carlos-2 ns-3-dev % 
